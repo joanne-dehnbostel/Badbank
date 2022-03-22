@@ -1,13 +1,13 @@
-//function Deposit(){
-  //return (
-   // <h1>Deposit</h1>
- // )
-//}
-//function Deposit(){
- // const [show, setShow]         = React.useState(true);
-  //const [status, setStatus]     = React.useState('');
-  //const [depositAmount, setDepositAmount]         = React.useState('');
-  //const ctx = React.useContext(UserContext);  
+function Deposit(){
+  const [show, setShow]         = React.useState(true);
+  const [status, setStatus]     = React.useState('');
+ const [deposit, setDeposit]         = React.useState('');
+  const ctx = React.useContext(UserContext);  
+  return (
+   <h1>Deposit</h1>
+  )
+}
+
 
   //function validate(field, label){
       //if (!field) {
@@ -19,14 +19,14 @@
   //}
 
   //function handleCreate(){
-    //console.log(depositAmount);
-    //if (!validate(depositAmount,     'name'))     return;
-    //ctx.users.push({depositAmount,balance:100});
+    //console.log(deposit);
+    //if (!validate(deposit,     'name'))     return;
+    //ctx.users.push({deposit,balance:100});
     //setShow(false);
   //}    
 
   //function clearForm(){
-    //setDepositAmount('');
+    //setDeposit('');
     //setShow(true);
  // }
 
@@ -37,8 +37,8 @@
      // status={status}
      // body={show ? (  
               //<>
-              //depositAmount<br/>
-              //<input type="input" className="form-control" id="depositAmount" placeholder="Enter deposit amount" value={depositAmount} onChange={e => setDepositAmount(e.currentTarget.value)} /><br/>
+              //deposit<br/>
+              //<input type="input" className="form-control" id="deposit" placeholder="Enter deposit amount" value={deposit} onChange={e => setDeposit(e.currentTarget.value)} /><br/>
               
               
              // <button type="submit" className="btn btn-light" onClick={handleCreate}>Deposit Funds</button>
