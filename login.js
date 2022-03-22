@@ -4,6 +4,7 @@ function Login(){
   const [name, setName]         = React.useState('');
   const [email, setEmail]       = React.useState('');
   const [password, setPassword] = React.useState('');
+  const [deposit, setDeposit] = React.useState('');
   const ctx = React.useContext(UserContext);  
 
   function validate(field, label){
@@ -20,7 +21,7 @@ function Login(){
     if (!validate(name,     'name'))     return;
     if (!validate(email,    'email'))    return;
     if (!validate(password, 'password')) return;
-    ctx.users.push({name,email,password,deposit:0,balance:100});
+    ctx.users.push({name,email,password,deposit,balance:100});
     setShow(false);
   }    
 
@@ -28,6 +29,7 @@ function Login(){
     setName('');
     setEmail('');
     setPassword('');
+    setDeposit('');
     setShow(true);
   }
 
@@ -44,12 +46,13 @@ function Login(){
               <input type="input" className="form-control" id="email" placeholder="Enter email" value={email} onChange={e => setEmail(e.currentTarget.value)}/><br/>
               Password<br/>
               <input type="password" className="form-control" id="password" placeholder="Enter password" value={password} onChange={e => setPassword(e.currentTarget.value)}/><br/>
-              <button type="submit" className="btn btn-light" onClick={handleCreate}>Create Account</button>
+              <input type="deposit" className="form-control" id="deposit" placeholder="Enter deposit amount" value={deposit} onChange={e => setDeposit(e.currentTarget.value)}/><br/>
+                <button type="submit" className="btn btn-light" onClick={handleCreate}>Create Deposit</button>
               </>
             ):(
               <>
               <h5>Success</h5>
-              <button type="submit" className="btn btn-light" onClick={clearForm}>Add another account</button>
+              <button type="submit" className="btn btn-light" onClick={clearForm}>Add another deposit</button>
               </>
             )}
     />
