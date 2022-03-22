@@ -17,10 +17,11 @@ function Login(){
   }
 
   function handleCreate(){
-    console.log(name,email,password);
+    console.log(name,email,password,deposit);
     if (!validate(name,     'name'))     return;
     if (!validate(email,    'email'))    return;
     if (!validate(password, 'password')) return;
+    if (!validate(deposit, 'deposit')) return;
     ctx.users.push({name,email,password,deposit,balance:100});
     setShow(false);
   }    
