@@ -6,7 +6,7 @@ function Deposit(){
   return (
    <h1>Deposit with Validation and Handling and deposit form card</h1>
   )
-}
+
 function validate(field, label){
       if (!field) {
        setStatus('Error: ' + label);
