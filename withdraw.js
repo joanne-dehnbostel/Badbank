@@ -4,7 +4,7 @@ function Withdraw(){
   const [name, setName]         = React.useState('');
   const [email, setEmail]       = React.useState('');
   const [password, setPassword] = React.useState('');
-  const [withdrawal, setWithdrawal] = React.useState('');
+  const [withdraw, setWithdraw] = React.useState('');
   const ctx = React.useContext(UserContext);  
 
   function validate(field, label){
@@ -17,12 +17,12 @@ function Withdraw(){
   }
 
   function handleCreate(){
-    console.log(name,email,password,deposit);
+    console.log(name,email,password,withdraw);
     if (!validate(name,     'name'))     return;
     if (!validate(email,    'email'))    return;
     if (!validate(password, 'password')) return;
-    if (!validate(withdrawal, 'withdrawal')) return;
-    ctx.users.push({name,email,password,deposit,withdrawal,balance:100});
+    if (!validate(withdraw, 'withdraw')) return;
+    ctx.users.push({name,email,password,deposit,withdraw,balance:100});
     setShow(false);
   }    
 
@@ -30,7 +30,7 @@ function Withdraw(){
     setName('');
     setEmail('');
     setPassword('');
-    setWithdrawal('');
+    setWithdraw('');
     setShow(true);
   }
 
@@ -47,8 +47,8 @@ function Withdraw(){
               <input type="input" className="form-control" id="email" placeholder="Enter email" value={email} onChange={e => setEmail(e.currentTarget.value)}/><br/>
               Password<br/>
               <input type="password" className="form-control" id="password" placeholder="Enter password" value={password} onChange={e => setPassword(e.currentTarget.value)}/><br/>
-                Deposit<br/>
-                <input type="withdrawal" className="form-control" id="withdrawal" placeholder="Enter withdrawal amount" value={deposit} onChange={e => setWithdrawal(e.currentTarget.value)}/><br/>
+                Withdrawal<br/>
+                <input type="withdraw" className="form-control" id="withdraw" placeholder="Enter withdrawal amount" value={withdraw} onChange={e => setWithdraw(e.currentTarget.value)}/><br/>
                 <button type="submit" className="btn btn-light" onClick={handleCreate}>Withdraw Funds</button>
               </>
             ):(
@@ -60,15 +60,4 @@ function Withdraw(){
     />
   )
 }
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+
