@@ -4,7 +4,7 @@ function Deposit(){
  const [deposit, setDeposit]         = React.useState('');
   const ctx = React.useContext(UserContext);  
   return (
-   <h1>Deposit with Validation and Handling</h1>
+   <h1>Deposit with Validation and Handling and deposit form card</h1>
   )
 }
 function validate(field, label){
