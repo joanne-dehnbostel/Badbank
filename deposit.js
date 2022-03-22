@@ -23,30 +23,30 @@ function validate(field, label){
     setShow(false);
   }    
 
-  //function clearForm(){
-    //setDeposit('');
-    //setShow(true);
- // }
+  function clearForm(){
+    setDeposit('');
+    setShow(true);
+  }
 
- // return (
-    //<Card
-      //bgcolor="primary"
-     // header="Deposit"
-     // status={status}
-     // body={show ? (  
-              //<>
-              //deposit<br/>
-              //<input type="input" className="form-control" id="deposit" placeholder="Enter deposit amount" value={deposit} onChange={e => setDeposit(e.currentTarget.value)} /><br/>
+ return (
+    <Card
+      bgcolor="primary"
+     header="Deposit"
+     status={status}
+     body={show ? (  
+              <>
+              deposit<br/>
+              <input type="input" className="form-control" id="deposit" placeholder="Enter deposit amount" value={deposit} onChange={e => setDeposit(e.currentTarget.value)} /><br/>
               
               
-             // <button type="submit" className="btn btn-light" onClick={handleCreate}>Deposit Funds</button>
-              //</>
-           // ):(
-             // <>
-              //<h5>Success</h5>
-              //<button type="submit" className="btn btn-light" onClick={clearForm}>Make another deposit</button>
-              //</>
-           // )}
-   //  />
- // )
-//}
+              <button type="submit" className="btn btn-light" onClick={handleCreate}>Deposit Funds</button>
+              </>
+           ):(
+              <>
+              <h5>Success</h5>
+              <button type="submit" className="btn btn-light" onClick={clearForm}>Make another deposit</button>
+              </>
+            )}
+     />
+  )
+}
