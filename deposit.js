@@ -36,7 +36,7 @@ function validate(field, label){
       body={show ? (  
               <>
               Deposit<br/>
-              <input type="input" className="form-control" id="deposit" placeholder="Enter deposit" value={name} onChange={e => setDeposit(e.currentTarget.value)} /><br/>
+              <input type="input" className="form-control" id="deposit" placeholder="Enter deposit" value={deposit} onChange={e => setDeposit(e.currentTarget.value)} /><br/>
               
               <button type="submit" className="btn btn-light" onClick={handleCreate}>Create Deposit</button>
               </>
