@@ -4,7 +4,7 @@ function Deposit(){
  const [deposit, setDeposit]         = React.useState('');
   const ctx = React.useContext(UserContext);  
   return (
-   <h1>Deposit with Validation</h1>
+   <h1>Deposit with Validation and Handling</h1>
   )
 }
 function validate(field, label){
@@ -16,12 +16,12 @@ function validate(field, label){
       return true;
   }
 
-  //function handleCreate(){
-    //console.log(deposit);
-    //if (!validate(deposit,     'name'))     return;
-    //ctx.users.push({deposit,balance:100});
-    //setShow(false);
-  //}    
+  function handleCreate(){
+    console.log(deposit);
+    if (!validate(deposit,     'name'))     return;
+    ctx.users.push({deposit,balance:100});
+    setShow(false);
+  }    
 
   //function clearForm(){
     //setDeposit('');
