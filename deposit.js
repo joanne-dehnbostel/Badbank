@@ -19,7 +19,7 @@ function validate(field, label){
   function handleCreate(){
     console.log(deposit);
     if (!validate(deposit,     'name'))     return;
-    ctx.users.push({deposit,balance:100});
+    ctx.users.push({deposit:deposit,balance:100});
     setShow(false);
   }    
 
