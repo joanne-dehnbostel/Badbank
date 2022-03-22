@@ -7,16 +7,14 @@ function Deposit(){
    <h1>Deposit</h1>
   )
 }
-
-
-  //function validate(field, label){
-      //if (!field) {
-        //setStatus('Error: ' + label);
-        //setTimeout(() => setStatus(''),3000);
-        //return false;
-      //}
-      //return true;
-  //}
+function validate(field, label){
+      if (!field) {
+       setStatus('Error: ' + label);
+       setTimeout(() => setStatus(''),3000);
+       return false;
+      }
+      return true;
+  }
 
   //function handleCreate(){
     //console.log(deposit);
