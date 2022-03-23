@@ -22,7 +22,7 @@ function Withdraw(){
     if (!validate(email,    'email'))    return;
     if (!validate(password, 'password')) return;
     if (!validate(withdraw, 'withdraw')) return;
-    ctx.users.push({name,email,password,deposit,withdraw,balance:100});
+    ctx.users.push({name,email,password,withdraw,balance:100});
     setShow(false);
   }    
 
