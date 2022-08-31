@@ -48,7 +48,6 @@ function Deposit(){
     <Card
       bgcolor="primary"
       header="Create Deposit, Balance= "
-    balance={balance}
       status={status}
       body={show ? (  
               <>
