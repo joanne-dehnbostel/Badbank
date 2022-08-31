@@ -18,8 +18,8 @@ function Deposit(){
         setTimeout(() => setStatus(''),3000);
         return false;
       }
-    if(deposit<=0) {
-      setStatus('Error:Deposit must be greater than zero');
+    if(deposit<0) {
+      setStatus('Error:Deposit must not be less than zero');
       setTimeout(() => setStatus(''),3000);
         return false;
       }
