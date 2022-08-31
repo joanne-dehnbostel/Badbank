@@ -13,6 +13,16 @@ function Deposit(){
         setTimeout(() => setStatus(''),3000);
         return false;
       }
+    if NaN(deposit) {
+       setStatus('Error:Deposit must be a number');
+        setTimeout(() => setStatus(''),3000);
+        return false;
+      }
+    if(deposit<=0) {
+      setStatus('Error:Deposit must be greater than zero');
+      setTimeout(() => setStatus(''),3000);
+        return false;
+      }
       return true;
   }
 
