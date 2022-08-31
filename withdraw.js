@@ -13,9 +13,18 @@ function Withdraw(){
         setTimeout(() => setStatus(''),3000);
         return false;
       }
+    if(isNaN(deposit)) {
+       setStatus('Error:Withdrawal must be a number');
+        setTimeout(() => setStatus(''),3000);
+        return false;
+      }
+    if(withdraw<balance) {
+      setStatus('Error:Not enough cash!');
+      setTimeout(() => setStatus(''),3000);
+        return false;
+      }
       return true;
   }
-
   function handleCreate(){
     console.log(name,email,password,withdraw);
     if (!validate(name,     'name'))     return;
