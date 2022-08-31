@@ -2,7 +2,7 @@ function AllData(){
   const ctx = React.useContext(UserContext);
   return (
     <>
-    <h5>All Data in Store</h5>
+    <h5>All Data in Bank</h5>
     {JSON.stringify(ctx)}<br/>
     </>
   );
