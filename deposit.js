@@ -9,7 +9,7 @@ function Deposit(){
 
   function validate(field, label){
       if (!field) {
-        setStatus('Error no: ' + label);
+        setStatus('Error:Please enter ' + label);
         setTimeout(() => setStatus(''),3000);
         return false;
       }
