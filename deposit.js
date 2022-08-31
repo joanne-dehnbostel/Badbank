@@ -32,7 +32,7 @@ function Deposit(){
     if (!validate(email,    'email'))    return;
     if (!validate(password, 'password')) return;
     if (!validate(deposit, 'deposit')) return;
-    ctx.users.push({name,email,password,deposit,balance:100});
+    ctx.users.push({name,email,password,deposit,balance:0});
     setShow(false);
   }    
 
