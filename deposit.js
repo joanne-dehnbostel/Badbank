@@ -13,7 +13,7 @@ function Deposit(){
         setTimeout(() => setStatus(''),3000);
         return false;
       }
-    if NaN(deposit) {
+    if(isNaN(deposit)) {
        setStatus('Error:Deposit must be a number');
         setTimeout(() => setStatus(''),3000);
         return false;
