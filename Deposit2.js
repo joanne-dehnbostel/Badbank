@@ -13,6 +13,10 @@ function Deposit(){
         setTimeout(() => setStatus(''),3000);
         return false;
       }
+    if(isNaN(deposit)||deposit<0)}
+    text="Please enter a positive number";
+    return false
+  }
       return true;
   }
 
