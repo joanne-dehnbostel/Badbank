@@ -47,7 +47,7 @@ function Deposit(){
   return (
     <Card
       bgcolor="primary"
-      header="Create Deposit"
+      header="Create Deposit, Balance= "{Balance}
       status={status}
       body={show ? (  
               <>
